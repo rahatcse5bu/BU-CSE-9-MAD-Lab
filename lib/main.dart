@@ -1,3 +1,4 @@
+import 'package:bu_cse_lab/student.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,86 +10,127 @@ class BUCSE9 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Map<String, String>> students = [
+      {
+        'name': 'Palak',
+        'roll': '22CSE041',
+        'reg': '110-001-22',
+        'bloodGroup': 'A+',
+      },
+      {
+        'name': 'Biswhaw Dev',
+        'roll': '22CSE026',
+        'reg': '110-026-23',
+        'bloodGroup': 'B+',
+      },
+      {
+        'name': 'Kainsha',
+        'roll': '22CSE033',
+        'reg': '110-033-22',
+        'bloodGroup': 'O+',
+      },
+
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+      {
+        'name': 'Rahat',
+        'roll': '22CSE031',
+        'reg': '110-031-22',
+        'bloodGroup': 'O+',
+      },
+    ];
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("Flutter UI Basicss"),
+          title: Text("4th April 2026"),
           backgroundColor: Colors.greenAccent,
           centerTitle: true,
 
           leading: Icon(Icons.arrow_back),
         ),
         body: SafeArea(
-          child: Container(
-            color: Colors.amber,
+          child: SingleChildScrollView(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Expanded(
-                      flex: 8,
-                      child: Container(
-                        color: Colors.redAccent,
-                        child: Center(child: Text("Red")),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        color: Colors.greenAccent,
-                        child: Center(child: Text("Green")),
-                      ),
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: Container(
-                        color: Colors.blueAccent,
-                        child: Center(child: Text("Blue")),
-                      ),
-                    ),
-                  ],
-                ),
-                Text("CSE 9th Batch"),
-                Container(
-                  color: Colors.purpleAccent,
-                  child: Stack(
-                    children: [
-                      Container(height: 200, width: 600, color: Colors.green),
-                      Align(
-                        alignment: Alignment.center,
-                        child: Container(
-                          height: 100,
-                          width: 100,
-
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                        ),
-                      ),
-                    ],
+                Text("Total Students: ${students.length}"),
+                for (var student in students) ...[
+                  Student(
+                    name: student['name']!,
+                    roll: student['roll']!,
+                    reg: student['reg']!,
+                    bloodGroup: student['bloodGroup']!,
                   ),
-                ),
+                ],
               ],
             ),
           ),
         ),
-
-        //  drawer: Drawer(
-        //   child: Text("Sidebar Menu"),
-        //   //  ListView(
-        //   //   children: [
-        //   //     DrawerHeader(child: Text("Drawer Header"),decoration: BoxDecoration(color: Colors.greenAccent),),
-        //   //     ListTile(title: Text("Item 1"),leading: Icon(Icons.home),),
-        //   //     ListTile(title: Text("Item 2"),leading: Icon(Icons.settings),),
-        //   //     ListTile(title: Text("Item 3"),leading: Icon(Icons.info),),
-        //   //   ],
-        //   // ),
-        // ),
-        //   floatingActionButton: FloatingActionButton(onPressed: (){},child: Icon(Icons.add),backgroundColor: Colors.greenAccent,)
       ),
     );
   }
